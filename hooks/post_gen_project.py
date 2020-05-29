@@ -12,7 +12,7 @@ def remove_azure_pipeline_yaml_file():
 def main():
     if "{{ cookiecutter.use_azure_pipeline }}".lower() == "n":
         remove_azure_pipeline_yaml_file()
-    print("Your project is initiated successfully, enjoy the journey!")
+    print("Your project {{ cookiecutter.project_name }} is initiated successfully, enjoy the journey!")
 
 
 if __name__ == "__main__":
