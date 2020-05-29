@@ -3,10 +3,6 @@ Borrowed from cookiecutter-django: https://github.com/pydanny/cookiecutter-djang
 """
 
 import os
-from rich.console import Console
-
-# for fancy print
-console = Console()
 
 
 def remove_azure_pipeline_yaml_file():
@@ -16,7 +12,7 @@ def remove_azure_pipeline_yaml_file():
 def main():
     if "{{ cookiecutter.use_azure_pipeline }}".lower() == "n":
         remove_azure_pipeline_yaml_file()
-    console.print("Your project is initiated successfully, enjoy the journey!", style="bold green")
+    print("Your project is initiated successfully, enjoy the journey!")
 
 
 if __name__ == "__main__":

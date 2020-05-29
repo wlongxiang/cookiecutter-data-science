@@ -13,7 +13,8 @@
 
 import os
 import sys
-from {{ cookiecutter.project_name }} import __version__
+sys.path.insert(0, "..")
+from {{cookiecutter.project_name}} import __version__
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -28,18 +29,13 @@ from {{ cookiecutter.project_name }} import __version__
 # Add any Sphinx extension module names here, as strings. They can be extensions
 # coming with Sphinx (named 'sphinx.ext.*') or your custom ones.
 extensions = [
-    'sphinx.ext.autodoc',
     'sphinx.ext.mathjax',
 ]
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
-source_parsers = {
-    '.md': 'recommonmark.parser.CommonMarkParser',
-}
 # The suffix of source filenames.
 source_suffix = ['.rst', '.md']
-
 
 # The encoding of source files.
 # source_encoding = 'utf-8-sig'
@@ -172,7 +168,6 @@ html_static_path = ['_static']
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = '{{ cookiecutter.project_name }}doc'
-
 
 # -- Options for LaTeX output --------------------------------------------------
 
